@@ -24,7 +24,9 @@ p::first-letter{
     font-size: 28px;
 }
 img[title]{
-    border: 5px solid purple
+    border: 5px solid purple;
+    border-style: dotted;
+    box-shadow: 2px 2px 2px 2px gray;
 }
 
 .primary{
@@ -33,3 +35,4 @@ img[title]{
 #myself{
     font-style: italic;
 }
+
