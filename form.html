@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+
+    <title>form</title>
+</head>
+<body>
+    <form method="post"  action="process.php">
+        <fieldset>
+            <legend>Personal Info</legend>
+            <p>
+                <label>Title:</label>
+                <input type="text" name="Name" placeholder="enter name">
+                
+            </p>
+            <p>
+                <label>Country:</label>
+                <select name="coices">
+                
+                <option>Canada</option>
+                <option>Pakistan</option>
+                <option>England</option>
+                </select>
+                
+            </p>
+            <p>
+                <label>password</label>
+                <input type="password" name="password" placeholder="enter password">
+            </p>
+            <p>
+                <label>Gender</label>
+                <input type="radio" name="gender"><label>male</label>
+                <input type="radio" name="gender"><label>female</label>
+
+            </p>
+            <p>
+                <label>Hobbies:</label><br>
+                <input type="checkbox" name="hobbies" value="cricket"><label>Cricket</label><br>
+                <input type="checkbox" name="hobbies" value="badminton"><label>Badminton</label><br>
+                <input type="checkbox" name="hobbies" value="football"><label>Football</label><br>
+
+            </p>
+            <p>
+                <label>Email</label>
+                <input type="email" name="Email" placeholder="enter email">
+            </p>
+            
+            <input type="image" src="download.jpeg" style="width: 100px; height: 40px; padding-top: 20px; padding-left: 50px; border-top-left-radius: 80%; ">
+        </fieldset>
+
+    </form>
+</body>
+</html>
