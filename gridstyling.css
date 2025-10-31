@@ -1,0 +1,252 @@
+.mainbodygrid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f6ffff;
+}
+
+header {
+  background-color: #0FA4AF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbargrid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.Cardsgrid li{
+    text-align: left;
+}
+
+nav {
+  background-color: #0FA4AF;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+nav ul a:hover {
+  background-color: yellow;
+  color: black;
+  border-radius: 8px;
+}
+
+.Primary {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.PicandInfo {
+  display: grid;
+  grid-template-columns: 220px auto;
+  align-items: center;
+  gap: 20px;
+}
+section div h1{
+    text-align: left;
+}
+
+img[title] {
+  border: 5px dotted purple;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 8px;
+}
+
+#myself {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.EducationalInfo {
+  display: grid;
+  background-color: #eaf9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Hobbies {
+  display: grid;
+  background-color: #f8fdfd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Cardsgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.carditem {
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.carditem img {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.activities {
+  display: grid;
+  background-color: #f2fcfc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #d9f0f0;
+}
+
+.footer {
+  display: grid;
+  background-color: #0FA4AF;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.footer a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1, h2 {
+  color: #0e3d40;
+  text-align: center;
+}
+
+p::first-letter {
+  font-size: 28px;
+  color: #0FA4AF;
+}
+
+a[href^="https"] {
+  background-color: #b3f3f8;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    background-color: #e3f9ff;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .PicandInfo {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .PicandInfo img {
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  #myself {
+    font-size: 16px;
+  }
+
+  .Cardsgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .carditem img {
+    height: 200px;
+  }
+
+  h1, h2 {
+    font-size: 22px;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  .PicandInfo {
+    grid-template-columns: 180px auto;
+  }
+
+  .Cardsgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #myself {
+    font-size: 18px;
+  }
+
+  table {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
+  .Cardsgrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #myself {
+    font-size: 20px;
+  }
+}
