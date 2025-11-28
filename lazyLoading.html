@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lazy Loading</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .screenshot, .lazy {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto 40px auto; 
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            min-height: 100px; 
+            transition: opacity 1s ease-in;
+        }
+
+        .lazy {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lazy Loading</h1>
+
+    <img src="Home.png" alt="HomePage" class="screenshot">
+
+    <img data-src="View.png" alt="DetailPage" class="lazy">
+    <img data-src="Book.png" alt="Book Now Page" class="lazy">
+    <img data-src="Trip.png" alt="Trip Page" class="lazy">
+
+    <script>
+    function isInViewport(img, offset = 100) {
+        const rect = img.getBoundingClientRect();
+        return rect.top < window.innerHeight + offset;
+    }
+
+    function loadImage(img) {
+        img.src = img.dataset.src; 
+        img.onload = () => {
+            img.style.opacity = "1"; 
+        };
+    }
+
+    function lazyLoadImages() {
+        lazyImages.forEach(img => {
+            if (isInViewport(img)) {
+                loadImage(img);
+            }
+        });
+
+        lazyImages = lazyImages.filter(img => !img.src || img.src === "");
+    }
+
+    let lazyImages = Array.from(document.querySelectorAll('.lazy'));
+
+    window.addEventListener('scroll', lazyLoadImages);
+    window.addEventListener('load', lazyLoadImages);
+</script>
+
+
+
+</body>
+</html>
